@@ -1,0 +1,79 @@
+{% extends "bace.html" %}
+{% load static %}
+
+    {% block condent %}
+
+    <!-- ____________####aduvticement####______________ -->
+    <div class="adutaice">
+      <div id="cursole">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div  id="carousel-point" class="carousel-item active">
+              
+              <div  class="carousel-caption d-none d-md-block">
+                <h2>quality assets every <span> 30% OFF</span></h2>
+              </div>
+            </div>
+            <div id="carousel-point" class="carousel-item">
+              <div class="carousel-caption d-none d-md-block">
+                <h2>quality assets every day <span> 30% OFF</span></h2>
+              </div>
+              
+            </div>
+            <div id="carousel-point" class="carousel-item">
+              <div class="carousel-caption d-none d-md-block">
+                <h2>quality assets every day <span> 30% OFF</span></h2>
+              </div>
+             
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        
+
+      </div>
+
+
+        
+    </div>
+
+
+
+
+    <!-- ####_____prodect____#### -->
+    <div id="prodect2-condainer" class="condainer text-center ">
+
+      {% for n in prodect %}
+      <div id="card-full-body" class="card" >
+        <img class="card-img-top" src="{{n.prodect_image.url}}" alt="Card image cap">
+        <div id="hover-part">
+          <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a></a>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">{{n.prodect_name}}</h2>
+          <li>
+        <p class="card-text">{{n.prodect_right}}</p>
+          <p class="card-text2">{{n.prodect_offerright}}</p>
+        </li>
+        </div>
+      </div>
+      {% endfor %}
+
+      
+    </div>
+      
+  
+    {% endblock  %}
+    

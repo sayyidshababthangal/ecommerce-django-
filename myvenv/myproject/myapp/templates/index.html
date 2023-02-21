@@ -1,0 +1,573 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>infinity</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/css/magic.css' %}">
+  </head>
+  <body>
+    <header>
+                           <!-- ______________navbar___________________ -->
+    
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img id="logo" src="{% static '/img/Logo-magic-india.jpg' %}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li id="nav-item" class="nav-item active">
+              <a class="nav-link" href="{% url 'home'%}">HOME <span class="sr-only">(current)</span></a>
+            </li>
+            <li id="nav-item" class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                PAGE
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">home1</a>
+                <a class="dropdown-item" href="#">home2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">home3</a>
+              </div>
+            </li>
+            <li id="nav-item" class="nav-item active">
+              <a class="nav-link" href="{% url 'about'%}">ABOUT <span class="sr-only">(current)</span></a>
+            </li>
+            <li id="nav-item" class="nav-item active">
+              <a class="nav-link" href="{% url 'contact'%}">CONTACT <span class="sr-only">(current)</span></a>
+            </li>
+            
+          </ul>
+          <form id="search_div" class="form-inline my-2 my-lg-0">
+            <input id="sarche-space" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button id="sarche-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="{% static '/img\309077_search_icon.png' %}" alt=""></button>
+          </form>
+        </div>
+        <div class="nav-icons" id="nav-icons-model">
+          <img id="interface-icon" src="{% static '/img/62d3e9d819f62ce31ee02fdb_header-user-icon.svg' %}" onclick="toggleMenu()">
+          
+          <div class="sub-manu-wrap" id="subMenu">
+            <div class="sub-manu">
+              <div class="user-info">
+                <img src="{% static '/img/peakpx-removebg-preview.png' %}" alt="">
+                <h3>your name</h3>
+              </div>
+              <hr>
+              <a href=""  class="sub-manu-link">
+                <img src="{% static '/img/211605_contact_icon.png' %}" alt="">
+                <p>sign_up</p>
+                
+              </a>
+              <a href="" class="sub-manu-link">
+                <img src="{% static '/img/211605_contact_icon.png' %}" alt="">
+                <p>logou</p>
+                
+              </a>
+              <a href="" class="sub-manu-link">
+                <img src="{% static '/img/211605_contact_icon.png' %}" alt="">
+                <p>settings</p>
+                
+              </a>
+              <a href=""  class="sub-manu-link">
+                <img src="{% static '/img/211605_contact_icon.png' %}" alt="">
+                <p>about</p>
+                
+              </a>
+
+
+
+            </div>
+          </div>
+          <img id="interface-icon" src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" onclick="cartManu()">
+          <div id="notifcation_cart">
+            0
+          </div>
+          <div class="sub-cart-wrap" id="subcart">
+            <div id="head_cart">
+              <p>Your Cart</p>
+              <img id="closing_part_cart" src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt="">
+              
+            </div>
+            <hr>
+            <p id="notification_msg">No items found.</p>
+         
+        </div>
+        </div>
+      </nav>
+    </header>
+    
+
+                        <!-- ___________________carousle__________________ -->
+     
+    <div id="carousel-bg" class="container"> 
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div id="carousel-main" class="carousel-item active">
+            <div id="carousel-fit">
+            <img id="carsoule-ing-position" class="d-block " src="{% static '/img/12133-removebg-preview.png' %}" alt="First slide">
+            <div id="text-part-main" class="">
+              <h3>NEW COLLECTIONS</h3>
+              
+              <p>Lorem ipsum dolor sit amet, consectetur <br> scelerisque a tincidunt urna quam</p>
+              <a href="{% url 'home'%}"><button style="background-color: #f3424d;">Shop Now</button></a>
+          </div>
+        </div>
+          </div>
+          <div id="carousel-main" class="carousel-item">
+            <div id="carousel-fit">
+            <img id="carsoule-ing-position" class="d-block" src="{% static '/img/504-removebg-preview.png' %}" alt="Second slide">
+            <div id="text-part-main" class="">
+              <h3>NEW COLLECTIONS</h3>
+              
+              <p>Lorem ipsum dolor sit amet, consectetur <br> scelerisque a tincidunt urna quam</p>
+              <a href="{%url 'home'%}"><button>Shop Now</button></a>
+          </div>
+        </div>
+          </div>
+          <div id="carousel-main" class="carousel-item">
+            <div id="carousel-fit">
+            <img id="carsoule-ing-position" class="d-block" src="{% static '/img/861-removebg-preview.png' %}" alt="Third slide">
+            <div id="text-part-main" class="">
+              <h3>NEW COLLECTIONS</h3>
+              
+              <p>Lorem ipsum dolor sit amet, consectetur <br> scelerisque a tincidunt urna quam</p>
+              <a href="{%url 'home'%}"><button style="background-color:#e4e4e1 ;">Shop Now</button></a>
+          </div>
+        </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    
+    </div>
+
+
+
+
+               <!-- _____________prodects_____________ -->
+    
+    <div class="container">
+      <div class="head-part">
+        <h1>Featured Collections</h1>
+        <p>Most Selling and Trending Product</p>
+      </div>
+
+      <div id="prodect-condainer" class="condainer text-center ">
+        <div id="card-full-body" class="card" >
+          <img class="card-img-top" src="{% static '/img/1813.jpg' %}" alt="Card image cap">
+          <div id="hover-part">
+            <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a></a>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Accent Leisure Chairs</h2>
+            <li>
+          <p class="card-text">$ 65.35 USD</p>
+            <p class="card-text2">$ 102.35 USD</p>
+          </li>
+          </div>
+        </div>
+
+        <div id="card-full-body" class="card" >
+          <img class="card-img-top" src="{% static '/img/694.jpg' %}" alt="Card image cap">
+          <div id="hover-part">
+            <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a>          </div>
+          
+          <div class="card-body">
+            <h2 class="card-title">Accent Leisure Chairs</h2>
+            <li>
+          <p class="card-text">$ 65.35 USD</p>
+            <p class="card-text2">$ 102.35 USD</p>
+          </li>
+          </div>
+        </div>
+
+        <div id="card-full-body" class="card" >
+          <img class="card-img-top" src="{% static '/img/1813.jpg' %}" alt="Card image cap">  
+          <div id="hover-part">
+            <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Accent Leisure Chairs</h2>
+            <li>
+          <p class="card-text">$ 65.35 USD</p>
+            <p class="card-text2">$ 102.35 USD</p>
+          </li>
+          </div>
+        </div>
+
+        <div id="card-full-body" class="card">
+          <img class="card-img-top" src="{% static '/img/694.jpg' %}" alt="Card image cap">
+          <div id="hover-part">
+            <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Accent Leisure Chairs</h2>
+            <li>
+          <p class="card-text">$ 65.35 USD</p>
+            <p class="card-text2">$ 102.35 USD</p>
+          </li>
+          </div>
+        </div>
+
+        <div id="card-full-body" class="card">
+          <img class="card-img-top" src="{% static '/img/1940.jpg' %}" alt="Card image cap">
+          <div id="hover-part">
+            <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Accent Leisure Chairs</h2>
+            <li>
+          <p class="card-text">$ 65.35 USD</p>
+            <p class="card-text2">$ 102.35 USD</p>
+          </li>
+          </div>
+        </div>
+
+        <div id="card-full-body" class="card" >
+          <img class="card-img-top" src="{% static '/img/694.jpg' %}" alt="Card image cap">
+          <div id="hover-part">
+            <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Accent Leisure Chairs</h2>
+            <li>
+          <p class="card-text">$ 65.35 USD</p>
+            <p class="card-text2">$ 102.35 USD</p>
+          </li>
+          </div>
+        </div>
+
+        <div id="card-full-body" class="card" >
+          <img class="card-img-top" src="{% static '/img/1940.jpg' %}" alt="Card image cap">
+          <div id="hover-part">
+            <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Accent Leisure Chairs</h2>
+            <li>
+          <p class="card-text">$ 65.35 USD</p>
+            <p class="card-text2">$ 102.35 USD</p>
+          </li>
+          </div>
+        </div>
+
+        <div id="card-full-body" class="card" >
+          <img class="card-img-top" src="{% static '/img/861.jpg' %}" alt="Card image cap">
+          <div id="hover-part">
+            <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Accent Leisure Chairs</h2>
+            <li>
+          <p class="card-text">$ 65.35 USD</p>
+            <p class="card-text2">$ 102.35 USD</p>
+          </li>
+          </div>
+        </div>
+
+        <div id="card-full-body" class="card" >
+          <img class="card-img-top" src="{% static '/img/1813.jpg' %}" alt="Card image cap">
+          <div id="hover-part">
+            <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Accent Leisure Chairs</h2>
+            <li>
+          <p class="card-text">$ 65.35 USD</p>
+            <p class="card-text2">$ 102.35 USD</p>
+          </li>
+          </div>
+        </div>
+      </div>
+
+        
+
+    </div>
+
+
+    <!-- _____________advertisement_____________ -->
+
+
+
+    <div class="container-fluid">
+      <div id="advertisement-shop">
+        <h5>NEW COLLECTIONS</h5>
+        <h2>Leisure Chair Set</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur scelerisque a tincidunt urna quam</p>
+        <BUtton><p>SHOP NOW</p></BUtton>
+      </div>
+      <img class="img-advertisement" src="{% static '/img/62db944be8fd176823e9ecbc_banner-style-9.jpg' %}" alt="">
+
+    </div>
+
+
+
+    
+               <!-- _____________prodects_____________ -->
+    
+               <div class="container">
+                <div class="head-part">
+                  <h1>Best Sellers</h1>
+                  <p>Most Selling Product</p>
+                </div>
+          
+                <div id="prodect-condainer" class="condainer text-center ">
+                  <div id="card-full-body" class="card" >
+                    <img class="card-img-top" src="{% static '/img/1813.jpg' %}" alt="Card image cap">
+                    <div id="hover-part">
+                      <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a>
+                    </div>
+                    <div class="card-body">
+                      <h2 class="card-title">Accent Leisure Chairs</h2>
+                      <li>
+                    <p class="card-text">$ 65.35 USD</p>
+                      <p class="card-text2">$ 102.35 USD</p>
+                    </li>
+                    </div>
+                  </div>
+          
+                  <div id="card-full-body" class="card" >
+                    <img class="card-img-top" src="{% static '/img/694.jpg' %}" alt="Card image cap">
+                    <div id="hover-part">
+                      <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a>
+                    </div>
+                    
+                    <div class="card-body">
+                      <h2 class="card-title">Accent Leisure Chairs</h2>
+                      <li>
+                    <p class="card-text">$ 65.35 USD</p>
+                      <p class="card-text2">$ 102.35 USD</p>
+                    </li>
+                    </div>
+                  </div>
+          
+                  <div id="card-full-body" class="card" >
+                    <img class="card-img-top" src="{% static '/img/1813.jpg' %}" alt="Card image cap">  
+                    <div id="hover-part">
+                      <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a>
+                    </div>
+                    <div class="card-body">
+                      <h2 class="card-title">Accent Leisure Chairs</h2>
+                      <li>
+                    <p class="card-text">$ 65.35 USD</p>
+                      <p class="card-text2">$ 102.35 USD</p>
+                    </li>
+                    </div>
+                  </div>
+          
+                  <div id="card-full-body" class="card">
+                    <img class="card-img-top" src="{% static '/img/694.jpg' %}" alt="Card image cap">
+                    <div id="hover-part">
+                      <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a>
+                    </div>
+                    <div class="card-body">
+                      <h2 class="card-title">Accent Leisure Chairs</h2>
+                      <li>
+                    <p class="card-text">$ 65.35 USD</p>
+                      <p class="card-text2">$ 102.35 USD</p>
+                    </li>
+                    </div>
+                  </div>
+          
+                  <div id="card-full-body" class="card">
+                    <img class="card-img-top" src="{% static '/img/1940.jpg' %}" alt="Card image cap">
+                    <div id="hover-part">
+                      <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a>
+                    </div>
+                    <div class="card-body">
+                      <h2 class="card-title">Accent Leisure Chairs</h2>
+                      <li>
+                    <p class="card-text">$ 65.35 USD</p>
+                      <p class="card-text2">$ 102.35 USD</p>
+                    </li>
+                    </div>
+                  </div>
+          
+                  <div id="card-full-body" class="card" >
+                    <img class="card-img-top" src="{% static '/img/694.jpg' %}" alt="Card image cap">
+                    <div id="hover-part">
+                      <a href="{% url 'prodect'%}" ><button id="hover-cart"><img src="{% static '/img/62d3e9d8b7f9bc09832f22e1_header-cart-icon.svg' %}" alt=""> Add to cart</button></a>
+                    </div>
+                    <div class="card-body">
+                      <h2 class="card-title">Accent Leisure Chairs</h2>
+                      <li>
+                    <p class="card-text">$ 65.35 USD</p>
+                      <p class="card-text2">$ 102.35 USD</p>
+                    </li>
+                    </div>
+                  </div>
+          
+                  
+          
+                  
+                </div>
+          
+                  
+          
+              </div>
+
+
+
+
+              <!-- _____________footer-part______________ -->
+
+              <footer class="footer-section">
+                <div class="container">
+                    <div class="footer-cta pt-5 pb-5">
+                        <div class="row">
+                            <div class="col-xl-4 col-md-4 mb-30">
+                                <div class="single-cta">
+                                    <i class="fas fa-map-marker-alt">
+                                      <img id="icon-footer" src="{% static '/img/location.svg' %}" alt="">
+                                    </i>
+                                    <div class="cta-text">
+                                        <h4>Find us</h4>
+                                        <span>1010 Avenue, sw 54321, chandigarh</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-4 mb-30">
+                                <div class="single-cta">
+                                    <i class="fas fa-phone">
+                                      <img id="icon-footer" src="{% static '/img/call.svg' %}" alt="">
+                                    </i>
+                                    <div class="cta-text">
+                                        <h4>Call us</h4>
+                                        <span>9876543210 0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-4 mb-30">
+                                <div class="single-cta">
+                                    <i class="far fa-envelope-open">
+                                      <img id="icon-footer" src="{% static '/img/mail.svg' %}" alt="">
+                                    </i>
+                                    <div class="cta-text">
+                                        <h4>Mail us</h4>
+                                        <span>mail@info.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-content pt-5 pb-5">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 mb-50">
+                                <div class="footer-widget">
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="{% static '/img/Logo-magic-india.jpg' %}" class="img-fluid" alt="logo"></a>
+                                    </div>
+                                    <div class="footer-text">
+                                        <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                                        elit,Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                    <div class="footer-social-icon">
+                                        <span>Follow us</span>
+                                        <a href="#"><img id="icon-footer-folowers" src="{% static '/img/instagram.svg' %}" alt=""></a>
+                                        <a href="#"><img id="icon-footer-folowers" src="{% static '/img/facebook.svg' %}" alt=""></a>
+                                        <a href="#"><img id="icon-footer-folowers" src="{% static '/img/skype.svg' %}" alt=""></a>
+                                        <a href="#"><img id="icon-footer-folowers" src="{% static '/img/mail.svg' %}" alt=""></a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                                <div class="footer-widget">
+                                    <div class="footer-widget-heading">
+                                        <h3>Useful Links</h3>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">about</a></li>
+                                        <li><a href="#">services</a></li>
+                                        <li><a href="#">portfolio</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="#">About us</a></li>
+                                        <li><a href="#">Our Services</a></li>
+                                        <li><a href="#">Expert Team</a></li>
+                                        <li><a href="#">Contact us</a></li>
+                                        <li><a href="#">Latest News</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                                <div class="footer-widget">
+                                    <div class="footer-widget-heading">
+                                        <h3>Subscribe</h3>
+                                    </div>
+                                    <div class="footer-text mb-25">
+                                        <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                    </div>
+                                    <div class="subscribe-form">
+                                        <form action="#">
+                                            <input type="text" placeholder="EmailAddress">  
+                                            <button><i class="fab fa-telegram-plane"><img id="icon-footer" src="{% static '/img/telegram.svg' %}" alt=""></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                                <div class="copyright-text">
+                                    <p>Copyright &copy; 2022, All Right Reserved <a href="#">Shabab</a></p>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                                <div class="footer-menu">
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Terms</a></li>
+                                        <li><a href="#">Privacy</a></li>
+                                        <li><a href="#">Policy</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+          
+    
+
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      let subMenu = document.getElementById("subMenu");
+      function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+      }
+      let subcart = document.getElementById("subCart");
+
+      function cartManu2(){
+        subCart.classList.toggle("open-cart");
+      }
+    
+    </script>
+   
+  </body>
+</html>
